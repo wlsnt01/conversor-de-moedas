@@ -1,0 +1,162 @@
+/* Reset e Configuração Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilização Geral */
+body {
+    background: url("./assets/moedas.webp") center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagem Decorativa */
+.mão-com-dinheiro {
+    max-width: 30vh;
+    margin-bottom: 20px;
+}
+
+/* Container Principal */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    background: rgba(20, 20, 20, 0.85);
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%;
+    max-width: 900px;
+    opacity: 0.95;
+}
+
+/* Labels e Inputs */
+label {
+    color: #e0e0e0;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+select, input {
+    color: #ffffff;
+    background: #3d3d3d;
+    border: 1px solid #757575;
+    border-radius: 4px;
+    height: 48px;
+    font-size: 18px;
+    margin-bottom: 24px;
+    padding: 0 12px;
+    width: 100%;
+}
+
+/* Botão de Conversão com efeito*/
+button {
+    cursor: pointer;
+    grid-column: 2 / 3;
+    width: 100%;
+    height: 48px;
+    border-radius: 5px;
+    border: 1px solid #003822;
+    background: linear-gradient(180deg, #007a4d 0%, #005f3b 40%, #003822 60%, #007a4d 100%);
+    color: #e0ffe0;
+    font-size: 18px;
+    margin-top: 20px;
+    box-shadow: 3px 3px 8px #002e1e, inset 2px 2px 3px rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(180deg, #00915b 0%, #007a4d 40%, #005f3b 60%, #00915b 100%);
+    box-shadow: 4px 4px 10px #002e1e, inset 3px 3px 4px rgba(255, 255, 255, 0.3);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: inset 3px 3px 8px #002e1e, inset -3px -3px 6px rgba(255, 255, 255, 0.4);
+}
+
+/* Área de Resultado */
+section {
+    grid-column: 1 / span 2;
+    margin-top: 36px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Estilização das Moedas */
+.currency-box {
+    text-align: center;
+}
+
+.currency {
+    color: #a0e0a0;
+    font-size: 14px;
+}
+
+.currency-value, .currency-value-to-convert {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        width: 40vh;
+        padding: 16px;
+    }
+
+    button {
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    input, select {
+        width: 18vh;
+    }
+
+    section {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .label-2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 40vh;
+        padding: 12px;
+    }
+
+    button {
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    input, select {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .label-2 {
+        text-align: center;
+    }
+}
